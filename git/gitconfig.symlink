@@ -1,11 +1,7 @@
 [include]
-    path = /Users/dannyt/.gitconfig_local
+    path = /Users/dduke/.gitconfig_local
 [core]
-    excludesfile = /Users/dannyt/.gitignore_global
-    pager = "diff-so-fancy | less --tabs=4 -RFX"
-[diff-so-fancy]
-    markEmptyLines = false
-	first-run = false
+    excludesfile = /Users/dduke/.gitignore_global
 [color]
 	ui = true
 [credential]
@@ -13,7 +9,7 @@
 [push]
     default = current
 [merge]
-    ff = only
+    ff = no
 [pull]
     default = current
 	ff = only
@@ -124,3 +120,20 @@
 [user]
 	email = dduke@netflix.com
 	name = David Vroom Duke
+[url "ssh://git@stash.corp.netflix.com:7999/"]
+	insteadOf = https://stash.corp.netflix.com/scm/
+[http "https://stash.prod.netflix.net:7006"]
+	sslCert = /Users/dduke/.metatron/user.crt
+	sslKey = /Users/dduke/.metatron/user.key
+	sslVerify = true
+[url "https://stash.prod.netflix.net:7006/scm"]
+	insteadOf = ssh://git@stash.corp.netflix.com:7999
+[url "https://stash.prod.netflix.net:7006"]
+	insteadOf = https://stash.corp.netflix.com
+	insteadOf = https://stash.corp.netflix.com:7006
+	insteadOf = https://stash.corp.netflix.com:7004
+	insteadOf = https://stash.netflix.com
+[http "https://stash-corp-ci-stable.prod.netflix.net:7006"]
+	sslCert = /Users/dduke/.metatron/user.crt
+	sslKey = /Users/dduke/.metatron/user.key
+	sslVerify = true
